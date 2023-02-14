@@ -9,7 +9,7 @@ api = Api(app)
 
 class getDrinks(Resource):
     def get(self):
-        f = open(os.environ["HOME"] + "/Desktop/dev/bartenderRestApi/drinks.json", "r", encoding="utf-8")
+        f = open("./drinks.json", "r", encoding="utf-8")
         data = json.load(f)
         args = request.args
         ingredients = args.getlist('in')
